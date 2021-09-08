@@ -46,6 +46,7 @@ public class login {
           txt_password.setColumns(10);
           f.getContentPane().add(txt_password);
 
+          //-------------------------------------LOGIN BUTTON------------------------------------------//
           btn_login=new JButton("LOGIN");
           btn_login.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e) {
@@ -81,7 +82,8 @@ public class login {
        btn_login.setForeground(new Color(30, 144, 255));
        btn_login.setBounds(90, 170, 80, 30);
        f.getContentPane().add(btn_login);
-
+       
+       //------------------------------------------REGISTER BUTTON------------------------------------//
        btn_register=new JButton("REGISTER");
        btn_register.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
