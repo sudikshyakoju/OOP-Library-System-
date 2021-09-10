@@ -90,20 +90,20 @@ public class system {
         f.getContentPane().add(txt_price);
 
 btn_addbook=new JButton("ADD BOOK");
-btn_addbook.setIcon(new ImageIcon("C:\\java_folder\\OOP_project\\src\\billing_system\\add.png"));
+btn_addbook.setIcon(new ImageIcon("D:\\sudi's folder\\add.png"));
 btn_addbook.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 	   String book_id = txt_bookID.getText();
 	   String book_name = txt_bookname.getText();
 	   String author = txt_author.getText();
-	   String genne = txt_genre.getText();
+	   String genre = txt_genre.getText();
 	   String price = txt_price.getText();
 		
 		if (e.getSource() == btn_addbook) {
 			system_database_connecter sdc= new system_database_connecter();
 			String query = "insert into book"
 					+ "(book_id,book_name,author,genne,price) "
-					+ "values('" +book_id + "','" + book_name + "','" + author + "','" + genne+ "','" +price+ "')";
+					+ "values('" +book_id + "','" + book_name + "','" + author + "','" + genre+ "','" +price+ "')";
 			int val= sdc.insert(query);
 			if (val>0) {
 				JOptionPane.showMessageDialog(f,"Data Save Successflly");	
@@ -120,7 +120,7 @@ btn_addbook.setBounds(400, 49, 159, 35);
 f.getContentPane().add(btn_addbook);
    
 btn_viewbooks=new JButton("VIEW BOOKS");
-btn_viewbooks.setIcon(new ImageIcon("C:\\java_folder\\Free_Thinker_project\\src\\login_registration\\icon\\display.png"));
+btn_viewbooks.setIcon(new ImageIcon("D:\\sudi's folder\\display.png"));
 btn_viewbooks.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		try { 
@@ -155,19 +155,19 @@ btn_viewbooks.setBounds(400, 93, 159, 35);
 f.getContentPane().add(btn_viewbooks);
 
 btn_updatebook=new JButton("UPDATE BOOK");
-btn_updatebook.setIcon(new ImageIcon("C:\\java_folder\\Free_Thinker_project\\src\\login_registration\\icon\\update.png"));
+btn_updatebook.setIcon(new ImageIcon("D:\\sudi's folder\\update.png"));
 btn_updatebook.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		String book_id = txt_bookID.getText();
 		String book_name = txt_bookname.getText();
 		String author = txt_author.getText();
-		String genne = txt_genre.getText();
+		String genre = txt_genre.getText();
 		String price = txt_price.getText();
 	
 		
 		if (e.getSource() == btn_updatebook) {
 			system_database_connecter sdc= new system_database_connecter();
-			String query = "update book set book_name = '"+book_name+"', author='"+author+"',genne='"+genne+"',price='"+price+"' where book_id ='"+book_id+"' ";
+			String query = "update book set book_name = '"+book_name+"', author='"+author+"',genre='"+genre+"',price='"+price+"' where book_id ='"+book_id+"' ";
 			int val= sdc.insert(query);
 			if (val>0) {
 				JOptionPane.showMessageDialog(f,"Data Updated Successflly");
@@ -186,7 +186,7 @@ btn_updatebook.setBounds(400, 133, 159, 35);
 f.getContentPane().add(btn_updatebook);
 
 btn_deletebook=new JButton("DELETE BOOK");
-btn_deletebook.setIcon(new ImageIcon("C:\\java_folder\\Free_Thinker_project\\src\\login_registration\\icon\\delete.png"));
+btn_deletebook.setIcon(new ImageIcon("D:\\sudi's folder\\delete.png"));
 btn_deletebook.addActionListener(new ActionListener() {
 	public void actionPerformed(ActionEvent e) {
 		String book_id = txt_bookID.getText();
@@ -215,7 +215,7 @@ f.getContentPane().add(btn_deletebook);
      layeredPane.setBounds(32, 183, 172, -65);
      f.getContentPane().add(layeredPane);
        
-    f.setSize(605,538);
+     f.setSize(605,538);
      f.getContentPane().setLayout(null);
      
      JScrollPane scrollPane = new JScrollPane();
@@ -243,14 +243,14 @@ f.getContentPane().add(btn_deletebook);
      	new Object[][] {
      	},
      	new String[] {
-     		"Book ID", "Book Name", "Author", "Genne", "Price"
+     		"Book ID", "Book Name", "Author", "Genre", "Price"
      	}
      ));
      scrollPane_1.setViewportView(table);
      
      JButton btn_clear = new JButton("CLEAR ");
      btn_clear.setFont(new Font("Arial", Font.BOLD, 12));
-     btn_clear.setIcon(new ImageIcon("C:\\java_folder\\Free_Thinker_project\\src\\login_registration\\icon\\clear1.png"));
+     btn_clear.setIcon(new ImageIcon("D:\\sudi's folder\\clear1.png"));
      btn_clear.addActionListener(new ActionListener() {
      	public void actionPerformed(ActionEvent e) {
      		txt_bookID.setText("");
@@ -267,8 +267,10 @@ f.getContentPane().add(btn_deletebook);
      
             JLabel lblpicture = new JLabel("");
             lblpicture.setIcon(new ImageIcon("D:\\Sudi's folder\\School Management System\\pictures\\bg.jpg"));
-            lblpicture.setBounds(0,0,581,491);
+            lblpicture.setBounds(0,0,585,495);
             f.getContentPane().add(lblpicture);
+            
+     f.setSize(585,495);    
      f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      f.setVisible(true);
 }

@@ -1,5 +1,6 @@
 package oop_sud;
 
+//IMPORT REQUIRED PACKAGES
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.*;
@@ -15,6 +16,7 @@ public class login {
      JPasswordField txt_password;
      JButton btn_login, btn_register;
 
+     //LOGIN FRAME
      public login() {
           f = new JFrame("Login");
           f.setResizable(false);
@@ -46,7 +48,7 @@ public class login {
           txt_password.setColumns(10);
           f.getContentPane().add(txt_password);
 
-          //-------------------------------------LOGIN BUTTON------------------------------------------//
+          //LOGIN BUTTON
           btn_login=new JButton("LOGIN");
           btn_login.addActionListener(new ActionListener() {
              public void actionPerformed(ActionEvent e) {
@@ -83,7 +85,7 @@ public class login {
        btn_login.setBounds(90, 170, 80, 30);
        f.getContentPane().add(btn_login);
        
-       //------------------------------------------REGISTER BUTTON------------------------------------//
+       //REGISTER BUTTON
        btn_register=new JButton("REGISTER");
        btn_register.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent e) {
@@ -102,6 +104,7 @@ public class login {
    btn_register.setBounds(190, 170, 110, 30);
    f.getContentPane().add(btn_register);
    
+     //BACKGROUND PICTURE
      JLayeredPane layeredPane = new JLayeredPane();
      layeredPane.setBounds(32, 183, 172, -65);
      f.getContentPane().add(layeredPane);

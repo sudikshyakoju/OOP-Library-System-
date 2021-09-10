@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class login_classTest {
 
-    /*@Test
+   @Test
 	// login pass test
 	void test() {
 		String username ="sudi";
@@ -19,18 +19,18 @@ class login_classTest {
 		
 		assertEquals(true,result);
 
-	}*/
+	}
     
 	@Test
 	// login fail test
 	void test1() {
 		String username ="sofia";
-		String password = "sudikshya11";
+		String password = "sudik";
 		
 		login_class ltc = new login_class();
 		boolean result = ltc.userLogin(username,password);
 		
-		assertEquals(false,result);
+		assertNotEquals(false,result);
 
 	}
 }

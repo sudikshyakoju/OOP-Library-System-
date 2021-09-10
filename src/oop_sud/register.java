@@ -1,5 +1,6 @@
 package oop_sud;
 
+//IMPORT REQUIRED PACKAGES
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.ImageIcon;
@@ -20,6 +21,7 @@ public class register {
     JPasswordField txt_password;
     JButton btn_register;
 
+    //REGISTER FRAME
     public register() {
         f = new JFrame("Register");
         f.setResizable(false);
