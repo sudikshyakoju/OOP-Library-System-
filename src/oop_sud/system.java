@@ -102,7 +102,7 @@ btn_addbook.addActionListener(new ActionListener() {
 		if (e.getSource() == btn_addbook) {
 			system_database_connecter sdc= new system_database_connecter();
 			String query = "insert into book"
-					+ "(book_id,book_name,author,genne,price) "
+					+ "(book_id,book_name,author,genre,price) "
 					+ "values('" +book_id + "','" + book_name + "','" + author + "','" + genre+ "','" +price+ "')";
 			int val= sdc.insert(query);
 			if (val>0) {
@@ -133,9 +133,9 @@ btn_viewbooks.addActionListener(new ActionListener() {
 			String book_id = String.valueOf(rs.getInt("book_id"));
 			String book_name = rs.getString("book_name");
 			String author = rs.getString("author");
-			String genne = rs.getString("genne");
+			String genre = rs.getString("genre");
 			String price = String.valueOf(rs.getInt("price"));
-			String tbData [] = {book_id,book_name,author, genne, price};
+			String tbData [] = {book_id,book_name,author, genre, price};
 			
 			DefaultTableModel tblModel = (DefaultTableModel)table.getModel();
 			

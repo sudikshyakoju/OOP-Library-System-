@@ -93,6 +93,7 @@ public class register {
         txt_password.setColumns(10);
         f.getContentPane().add(txt_password);
 
+        //REGISTER BUTTON
         btn_register=new JButton("REGISTER");
         btn_register.addActionListener(new ActionListener() {
 	       public void actionPerformed(ActionEvent e) {
@@ -130,15 +131,17 @@ public class register {
     }
 
 	private void dispose_f() {
-		// TODO Auto-generated method stub
 		f.dispose();
 	}
     });
+    
+    //REGISTER BUTTON
     btn_register.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 14));
     btn_register.setForeground(new Color(30, 144, 255));
     btn_register.setBounds(135, 258, 110, 30);
     f.getContentPane().add(btn_register);
    
+     //BACKGROUND PICTURE
      JLayeredPane layeredPane = new JLayeredPane();
      layeredPane.setBounds(32, 183, 172, -65);
      f.getContentPane().add(layeredPane);
