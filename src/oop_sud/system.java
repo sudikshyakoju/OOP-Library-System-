@@ -149,6 +149,8 @@ btn_viewbooks.addActionListener(new ActionListener() {
 		}
 	}
 });
+
+//VIEW BUTTON
 btn_viewbooks.setFont(new Font("Arial", Font.BOLD | Font.ITALIC, 12));
 btn_viewbooks.setForeground(new Color(30, 144, 255));
 btn_viewbooks.setBounds(400, 93, 159, 35);
