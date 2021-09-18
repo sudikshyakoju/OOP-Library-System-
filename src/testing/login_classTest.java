@@ -1,5 +1,6 @@
 package testing;
 
+//import
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -11,8 +12,8 @@ class login_classTest {
    @Test
 	// login pass test
 	void test() {
-		String username ="sudi";
-		String password = "sudikshya11";
+		String username ="sudikshya123";
+		String password = "koju";
 		
 		login_class ltc = new login_class();
 		boolean result = ltc.userLogin(username,password);
@@ -24,7 +25,7 @@ class login_classTest {
 	@Test
 	// login fail test
 	void test1() {
-		String username ="sofia";
+		String username ="sudikshya";
 		String password = "sudik";
 		
 		login_class ltc = new login_class();

@@ -2,8 +2,8 @@ package testing;
 
 public class login_class {
 
-	String username ="sudi";
-	String password= "sudikshya11";
+	String username ="sudikshya123";
+	String password= "koju";
 	
 	public boolean userLogin(String username, String password) {
 		boolean result = false;
@@ -17,7 +17,6 @@ public class login_class {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 }
