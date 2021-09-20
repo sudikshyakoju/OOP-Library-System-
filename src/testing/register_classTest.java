@@ -1,10 +1,10 @@
 package testing;
 
+//import packages
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-//import testing.register_test_class;
 
 class register_classTest extends register_class{
 
