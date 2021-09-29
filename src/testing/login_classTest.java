@@ -25,12 +25,12 @@ class login_classTest {
 	// login fail test
 	void test1() {
 		String username ="sofia";
-		String password = "11";
+		String password = "sudikshya11";
 		
 		login_class ltc = new login_class();
 		boolean result = ltc.userLogin(username,password);
 		
-		assertEquals(true,result);
+		assertEquals(false,result);
 
 	}
 }
